@@ -6,4 +6,5 @@
     "model": "assets/pizza/pizza.glb",
     "fallback": "assets/pizza/pizza.webp",
     "thumbnail": "assets/pizza/thumbnail.webp"
+
 }
