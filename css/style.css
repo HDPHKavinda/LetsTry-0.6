@@ -1,0 +1,217 @@
+/* Global Styles */
+:root {
+    --primary-color: #f8f8f8;
+    --secondary-color: #333;
+    --accent-color: #9c27b0;
+    --text-color: #333;
+    --light-gray: #e0e0e0;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--secondary-color);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Food Card */
+.food-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.food-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-details {
+    padding: 1.5rem;
+}
+
+.food-details h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background-color: #7b1fa2;
+}
+
+.cta-button:active {
+    transform: scale(0.98);
+}
+
+/* AR Container */
+.ar-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+
+.ar-container.hidden {
+    display: none;
+}
+
+.ar-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.ar-label h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.ar-label p {
+    font-size: 1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* Fallback Container */
+.fallback-container {
+    width: 100%;
+    height: 400px;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.fallback-container.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .food-card {
+        display: flex;
+        max-height: 300px;
+    }
+    
+    .food-image {
+        width: 40%;
+        height: auto;
+    }
+    
+    .food-details {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .food-details {
+        padding: 2rem;
+    }
+    
+    .food-details h2 {
+        font-size: 1.8rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+    }
+    
+    .price {
+        font-size: 1.4rem;
+    }
+    
+    .cta-button {
+        width: auto;
+        align-self: flex-start;
+    }
+}
